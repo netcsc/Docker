@@ -1,9 +1,9 @@
 FROM alpine:edge
 
-ENV VAULT_VERSION=0.5.2
+ENV VAULT_VERSION=0.6.0
 
 RUN  apk add --update curl bash ca-certificates \
-  && curl -L -O https://releases.hashicorp.com/vault/0.5.2/vault_${VAULT_VERSION}_linux_amd64.zip \
+  && curl -L -O https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip \
   && unzip vault_${VAULT_VERSION}_linux_amd64.zip \
   && mkdir -p /root/vault \
   && mv vault /root/vault/ \
